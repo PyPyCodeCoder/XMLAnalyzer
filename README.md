@@ -9,6 +9,6 @@ Implemented content analysis using three different approaches:
 - DOM API
 - LINQ to XML
 
-## Implementation Details
+## Implementation Details:
 - Input data for analysis and transformation provided in the form of an example *.xml file.
 - Transformation to HTML based on an XSL document (*.xsl).
