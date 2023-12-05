@@ -1,0 +1,50 @@
+﻿<StudentsList>
+    <Student>
+        <FirstName>Pavlo</FirstName>
+        <LastName>Oliinyk</LastName>
+        <Faculty>Computer Science</Faculty>
+        <Department>Applied Math</Department>
+        <Course>2</Course>
+        <DormAttributes>
+            <RoomNumber>213</RoomNumber>
+            <CheckInDate>01.09.2022</CheckInDate>
+            <CheckOutDate>01.06.2023</CheckOutDate>
+        </DormAttributes>
+    </Student>
+    <Student>
+        <FirstName>Andrii</FirstName>
+        <LastName>Danush</LastName>
+        <Faculty>Politology</Faculty>
+        <Department>Applied Politology</Department>
+        <Course>3</Course>
+        <DormAttributes>
+            <RoomNumber>213</RoomNumber>
+            <CheckInDate>01.09.2021</CheckInDate>
+            <CheckOutDate>01.06.2023</CheckOutDate>
+        </DormAttributes>
+    </Student>
+    <Student>
+        <FirstName>Vitalii</FirstName>
+        <LastName>Tkachyk</LastName>
+        <Faculty>Computer Science</Faculty>
+        <Department>System Analysis</Department>
+        <Course>3</Course>
+        <DormAttributes>
+            <RoomNumber>542</RoomNumber>
+            <CheckInDate>01.09.2021</CheckInDate>
+            <CheckOutDate>01.06.2023</CheckOutDate>
+        </DormAttributes>
+    </Student>
+    <Student>
+        <FirstName>Tamara</FirstName>
+        <LastName>Chomenko</LastName>
+        <Faculty>Politology</Faculty>
+        <Department>Applied Politology</Department>
+        <Course>1</Course>
+        <DormAttributes>
+            <RoomNumber>477</RoomNumber>
+            <CheckInDate>01.09.2023</CheckInDate>
+            <CheckOutDate>01.06.2023</CheckOutDate>
+        </DormAttributes>
+    </Student>
+</StudentsList>

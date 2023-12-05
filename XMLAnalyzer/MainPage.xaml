@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XMLAnalyzer.MainPage">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>      
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="10"
+                Spacing="10">
+                
+                <Picker x:Name="StrategyPicker" Title="Choose strategy for parsing" SelectedIndexChanged="Selected_Strategy">
+                     <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>SAX</x:String>
+                            <x:String>DOM</x:String>
+                            <x:String>LINQ to XML</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <Button
+                    Text="Search"
+                    Clicked="SearchButton_Clicked" />
+                
+                <Button
+                    Text="Clear"
+                    Clicked="ClearButton_Clicked" />
+                
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="3"
+                Padding="10, 0, 10, 0"
+                Spacing="5">
+                
+                <Button
+                    Text="Exit"
+                    Clicked="ExitButton_Clicked" />
+                
+                <Button
+                    Text="Open XML"
+                    Clicked="OpenButton_Clicked" />
+                
+                <Button
+                    Text="Get XML from GD"
+                    Clicked="GetXmlGDriveButton_Clicked" />
+
+                <Button
+                    Text="Save XML to GD"
+                    Clicked="SaveXmlGDriveButton_Clicked" />
+                
+                <Button
+                    Text="Save HTML"
+                    Clicked="SaveHtmlButton_Clicked" />
+                
+                <Button
+                    Text="Save HTML to GD"
+                    Clicked="SaveHtmlGDriveButton_Clicked" />
+                
+                <Button
+                    Text="Get XSLT from GD"
+                    Clicked="GetXsltGDriveButton_Clicked" />
+                
+                <Button
+                    Text="Save XSLT to GD"
+                    Clicked="SaveXsltGDriveButton_Clicked" />
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="FirstNameCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="First Name" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="FirstNameEntry"
+                    Placeholder="Enter first name for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="LastNameCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Last Name" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="LastNameEntry"
+                    Placeholder="Enter last name for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="6"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="FacultyCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Faculty" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="FacultyEntry"
+                    Placeholder="Enter faculty for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="7"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="DepartmentCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Department" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="DepartmentEntry"
+                    Placeholder="Enter department for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="8"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="CourseCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Course" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="CourseEntry"
+                    Placeholder="Enter course for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout
+                Grid.Row="9"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="RoomNumberCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Room Number" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="RoomNumberEntry"
+                    Placeholder="Enter room number for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout
+                Grid.Row="10"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="CheckInDateCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Check In Date" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="CheckInDateEntry"
+                    Placeholder="Enter check in date for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout
+                Grid.Row="11"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox x:Name="CheckOutDateCheckbox" />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Check Out Date" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="CheckOutDateEntry"
+                    Placeholder="Enter check out date for search"
+                    WidthRequest="250" />
+
+            </HorizontalStackLayout>
+            
+            <Grid
+                x:Name="ResultsTable"
+                Grid.Row="1"
+                Grid.Column="2"
+                Grid.RowSpan="100"
+                Padding="0, 10, 0, 0" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="FirstName" />
+
+                <Label Grid.Row="0"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="LastName" />
+
+                <Label Grid.Row="0"
+                Grid.Column="2"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Faculty" />
+
+                <Label Grid.Row="0"
+                Grid.Column="3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Department" />
+
+                <Label Grid.Row="0"
+                Grid.Column="4"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Course" />
+                
+                <Label Grid.Row="0"
+                Grid.Column="5"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="RoomNumber" />
+
+                <Label Grid.Row="0"
+                Grid.Column="6"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="CheckInDate" />
+
+                <Label Grid.Row="0"
+                Grid.Column="7"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="CheckOutDate" />
+                
+            </Grid>
+            
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>

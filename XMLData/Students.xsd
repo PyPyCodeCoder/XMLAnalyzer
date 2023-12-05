@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="StudentsList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Student">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FirstName" type="xs:string" />
+                            <xs:element name="LastName" type="xs:string" />
+                            <xs:element name="Faculty" type="xs:string" />
+                            <xs:element name="Department" type="xs:string" />
+                            <xs:element name="Course" type="xs:string" />
+                            <xs:element name="DormAttributes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="RoomNumber" type="xs:string" />
+                                        <xs:element name="CheckInDate" type="xs:string" />
+                                        <xs:element name="CheckOutDate" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
